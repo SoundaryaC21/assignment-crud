@@ -1,0 +1,146 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">
+    {{ isEditMode ? "Update" : "Create" }} Contact Form
+  </h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <!-- First Name and Last Name -->
+      <div class="col-md-6 mb-3">
+        <label for="first_name" class="form-label fw-bold text-primary"
+          >First Name</label
+        >
+        <input
+          type="text"
+          id="first_name"
+          class="form-control"
+          formControlName="first_name"
+          placeholder="Enter your first name"
+          required
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="last_name" class="form-label fw-bold text-primary"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          id="last_name"
+          class="form-control"
+          formControlName="last_name"
+          placeholder="Enter your last name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Email and Age -->
+      <div class="col-md-6 mb-3">
+        <label for="emailId" class="form-label fw-bold text-primary"
+          >Email <i class="bi bi-envelope"></i
+        ></label>
+        <input
+          type="email"
+          id="emailId"
+          class="form-control"
+          formControlName="emailId"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="age" class="form-label fw-bold text-primary">Age</label>
+        <input
+          type="number"
+          id="age"
+          class="form-control"
+          formControlName="age"
+          placeholder="Enter your age"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Gender and Mobile Number -->
+      <div class="col-md-6 mb-3">
+        <label for="gender" class="form-label fw-bold text-primary"
+          >Gender</label
+        >
+        <select
+          id="gender"
+          class="form-control"
+          formControlName="gender"
+          required
+        >
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="mobilenumber" class="form-label fw-bold text-primary"
+          >Mobile Number</label
+        >
+        <div class="input-group">
+          <span class="input-group-text">+91</span>
+          <input
+            type="text"
+            id="mobilenumber"
+            class="form-control"
+            formControlName="mobilenumber"
+            placeholder="Enter mobile number"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- PAN and Aadhaar -->
+      <div class="col-md-6 mb-3">
+        <label for="pan_no" class="form-label fw-bold text-primary"
+          >PAN No <i class="bi bi-credit-card"></i
+        ></label>
+        <input
+          type="text"
+          id="pan_no"
+          class="form-control"
+          formControlName="pan_no"
+          placeholder="Enter your PAN number"
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="adhaar_no" class="form-label fw-bold text-primary"
+          >Aadhaar No <i class="bi bi-person-badge"></i
+        ></label>
+        <input
+          type="text"
+          id="adhaar_no"
+          class="form-control"
+          formControlName="adhaar_no"
+          placeholder="Enter your Aadhaar number"
+        />
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="d-flex justify-content-center submit">
+      <button
+        type="submit"
+        class="btn btn-secondary btn-lg mt-3 px-5"
+        routerLink="/contacts"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg mt-3 px-5"
+        [disabled]="contactForm.invalid"
+      >
+        {{ isEditMode ? "Update" : "Create" }}
+      </button>
+    </div>
+  </form>
+</div>
