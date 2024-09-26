@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -44,7 +43,7 @@ export class ContactFormComponent {
         this.isEditMode = true;
         this.getContactById(this.id);
       } else {
-        this.isEditMode = false; // Set to create mode
+        this.isEditMode = false;
       }
     });
   }
@@ -60,15 +59,13 @@ export class ContactFormComponent {
       if (this.isEditMode) {
         this.contactService
           .updateContact(this.id, this.contactForm.value)
-          .subscribe((response) => {
-            console.log('Contact updated:', response);
+          .subscribe(() => {
             this.router.navigate(['/contacts']);
           });
       } else {
         this.contactService
           .createContact(this.contactForm.value)
-          .subscribe((response) => {
-            console.log('Contact created:', response);
+          .subscribe(() => {
             this.router.navigate(['/contacts']);
           });
       }

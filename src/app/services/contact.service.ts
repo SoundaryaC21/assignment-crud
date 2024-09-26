@@ -1,20 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IContact } from '../models/contact.interface';
 
-export interface IContact {
-  adhaar_no: string;
-  age: string;
-  createdAt: string;
-  emailId: string;
-  first_name: string;
-  gender: 'Male' | 'Female' | 'Other';
-  id: string;
-  last_name: string;
-  mobilenumber: string;
-  pan_no: string;
-  status: boolean;
-}
 @Injectable({
   providedIn: 'root',
 })

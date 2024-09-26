@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ContactService, IContact } from 'src/app/services/contact.service';
+import { IContact } from 'src/app/models/contact.interface';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contacts',
@@ -17,7 +18,6 @@ export class ContactsComponent {
 
   getContacts() {
     this.contactService.getContacts().subscribe((data) => {
-      console.log(data);
       this.contacts = data;
     });
   }

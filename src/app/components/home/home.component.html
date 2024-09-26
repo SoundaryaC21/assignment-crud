@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
-    <a class="navbar-brand" href="#">Brainwave.io</a>
+    <a class="navbar-brand font-weight-bold" href="#">Brainwave.io</a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="#">Demos</a></li>
@@ -10,28 +10,80 @@
         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
       </ul>
     </div>
-    <button class="btn btn-primary" routerLink="/contacts">
-      Get started a project
+    <button class="btn btn-primary rounded-pill px-4" routerLink="/contacts">
+      Get Started
     </button>
   </div>
 </nav>
 
-<!-- Header Section -->
-<section class="container-fluid bg-light py-5 text-center">
-  <div class="row align-items-center">
-    <!-- <div class="col-md-4">
-      <h1 class="display-4 font-weight-bold">Welcome to Crud App</h1>
-      <p class="lead mt-3"></p>
-      <button class="btn btn-primary mt-4" routerLink="/contacts">
-        Get started a project
-      </button>
-    </div> -->
-    <div class="col-md-8">
-      <img
-        src="assets/profile.svg"
-        class="img-fluid rounded-circle"
-        alt="Header Image"
-      />
+<!-- Hero Section -->
+<section class="hero-section text-center text-md-left py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="display-3 font-weight-bold mb-4">
+          Shift your business fast with
+          <span class="text-primary">Shade Pro.</span>
+        </h1>
+        <p class="lead mb-4 text-muted">
+          Build a stunning page without coding. Create your next consultancy
+          website in minutes.
+        </p>
+        <button
+          class="btn btn-primary btn-lg rounded-pill px-5"
+          routerLink="/contacts"
+        >
+          View My Assignment
+        </button>
+      </div>
+      <div class="col-md-6 text-center">
+        <img
+          src="assets/profile.svg"
+          class="img-fluid rounded-circle shadow-lg"
+          alt="Business Woman"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section bg-light py-5">
+  <div class="container text-center">
+    <h2 class="font-weight-bold mb-5">Why Choose Shade Pro?</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 rounded shadow-sm bg-white">
+          <i class="icon bi bi-lightning-fill text-primary display-4 mb-3"></i>
+          <h4>Fast & Easy Setup</h4>
+          <p>
+            Get your website up and running quickly with our easy-to-use
+            templates.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 rounded shadow-sm bg-white">
+          <i class="icon bi bi-palette-fill text-primary display-4 mb-3"></i>
+          <h4>Customizable Design</h4>
+          <p>
+            Tailor your website to your brand's needs with limitless
+            customization.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-card p-4 rounded shadow-sm bg-white">
+          <i
+            class="icon bi bi-shield-lock-fill text-primary display-4 mb-3"
+          ></i>
+          <h4>Secure and Reliable</h4>
+          <p>
+            Our platform ensures top-notch security and uptime for your
+            business.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
